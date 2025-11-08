@@ -9,29 +9,6 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-name: OpenWrt Builder
-
-
-permissions:
-  contents: write 
-
-on:
-  push:
-    tags:
-      - 'v*'
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 
-        uses: actions/checkout@v4
-
-     
-
-      - name: 
-        
-
 
 name: OpenWrt Builder
 
