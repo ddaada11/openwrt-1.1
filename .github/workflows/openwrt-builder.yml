@@ -9,6 +9,30 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
+name: 编译 OpenWrt
+
+# 在这里（工作流层级）添加 permissions，对所有 job 生效
+permissions:
+  contents: write  # 这是上传 Releases 所需的关键权限
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      # ... (这里是你的编译步骤)
+
+      - name: 上传固件到 Releases
+        # 你的上传步骤，例如使用 actions/upload-release-asset
+        # 因为上面已经赋予了 contents: write 权限，这个步骤现在就能成功了
+
 
 name: OpenWrt Builder
 
