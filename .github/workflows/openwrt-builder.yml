@@ -24,12 +24,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出代码
+      - name: 
         uses: actions/checkout@v4
 
      
 
-      - name: 上传固件到 Releases
+      - name: 
         
 
 
